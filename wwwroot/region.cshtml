@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@page
+@model IndexModel
+@{    
+    ViewData["Title"] = "Home page";
+    var AZREGION = Environment.GetEnvironmentVariable("REGION_NAME");
+}
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo List: A client for sample REST API in Azure App Service</title>
@@ -20,7 +27,6 @@
                 </button>
                 <a class="navbar-brand" href="#/Home">Azure App Service REST API Sample</a>
             </div>
-            <a href="https://app-win-dev-uks.azurewebsites.net/region.cshtml">Azure Region</a>
         </div>
     </div>
 
@@ -40,18 +46,21 @@
                 </div>
             </div>
         </div>
+        <div class="text-center">
+        <hr />
+        <p>This app is running from Azure region: @AZREGION</p>
+        <p>Host operating system: @Model.OSVersion</p>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="app/scripts/properties.js"></script>
     <script src="app/scripts/app.js"></script>
     <script src="app/scripts/todoListCtrl.js"></script>
     <script src="app/scripts/todoListSvc.js"></script>
     <script type="text/javascript">
-        var apiEndpoint = ""; // URL of the REST API in Azure App Service http://<appname>.azurewebsites.net
+        var apiEndpoint = "app-api-dev-uks.azurewebsites.net"; // URL of the REST API in Azure App Service http://<appname>.azurewebsites.net
     </script>
-    <p>The hosting region is %azRegionName%</p>
 </body>
 </html>
