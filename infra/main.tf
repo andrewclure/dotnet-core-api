@@ -56,5 +56,5 @@ resource "azurerm_windows_web_app" "app_uks" {
 resource "azurerm_app_service_source_control" "app_uks" {
   app_id        = azurerm_windows_web_app.app_uks.id
   repo_url      = "https://github.com/andrewclure/dotnet-core-api"
-  branch        = "main"
+  branch        = "master"
 }
