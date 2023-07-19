@@ -1,0 +1,1 @@
+var azRegionName = process.env.REGION_NAME

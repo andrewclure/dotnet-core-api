@@ -30,7 +30,6 @@
             <div class="col-xs-10 col-xs-offset-1" style="background-color:azure">
                 <div class="page-header">
                     <h1>Todo List</h1>
-                    <p>Hosted in Azure region %REGION_NAME%</p>
                 </div>
             </div>
         </div>
@@ -45,11 +44,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="app/scripts/properties.js"></script>
     <script src="app/scripts/app.js"></script>
     <script src="app/scripts/todoListCtrl.js"></script>
     <script src="app/scripts/todoListSvc.js"></script>
     <script type="text/javascript">
         var apiEndpoint = ""; // URL of the REST API in Azure App Service http://<appname>.azurewebsites.net
     </script>
+    <p>The hosting region is %azRegionName%</p>
 </body>
 </html>
